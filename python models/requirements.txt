@@ -1,0 +1,6 @@
+Flask
+Flask-Cors
+neuralprophet
+pandas
+scikit-learn
+gunicorn
