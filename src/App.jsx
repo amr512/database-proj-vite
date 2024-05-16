@@ -33,7 +33,7 @@ const createMainWeatherCard = (type, weatherItem) => {
                         <h6>Predicted Max: {weatherItem.main.temp_max}°C</h6>
                         <h6>Predicted Min: {weatherItem.main.temp_min}°C</h6>
                         <h6>Wind:{weatherItem.wind.speed} M/S</h6>
-                        <h6>Rain volume: {weatherItem.rain?.["1h"] || "none"} mm</h6>
+                        <h6>Rain volume: {weatherItem.rain?.["1h"] || weatherItem.rain?.["3h"] || "none"} mm</h6>
                         {/* <h6>*placeholder*</h6> */}
                     </div>
                     <div className="icon">
