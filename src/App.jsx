@@ -21,9 +21,6 @@ const createMainWeatherCard = (type, weatherItem) => {
                         <h6>Rain chance: {Number(weatherItem.rain_chance) * 100}%</h6>
                         {/* <h6>*placeholder*</h6> */}
                     </div>
-                    <div className="icon">
-                        <img src={`https://openweathermap.org/img/wn/${/*weatherItem.weather[0].icon*/"10d"}@4x.png`} alt="weather-icon" />
-                    </div>
                 </div>
             </>);
     } else {
@@ -40,7 +37,7 @@ const createMainWeatherCard = (type, weatherItem) => {
                         {/* <h6>*placeholder*</h6> */}
                     </div>
                     <div className="icon">
-                        <img src={`https://openweathermap.org/img/wn/${/*weatherItem.weather[0].icon*/"10d"}@4x.png`} alt="weather-icon" />
+                        <img src={`https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png`} alt="weather-icon" />
                     </div>
                 </div>
             </>);
@@ -53,7 +50,6 @@ const createWeatherCards = (type, weatherItem, index) => {
         return (
             <li className="card" key={index}>
                 <h3>({weatherItem.date})</h3>
-                <img src={`https://openweathermap.org/img/wn/${/*weatherItem.weather[0].icon*/"10d"}@4x.png`} alt="weather-icon" />
                 <h6>Predicted Temperature: {weatherItem.mean_temp}°C</h6>
                 <h6>Predicted Max: {weatherItem.max_temp}°C</h6>
                 <h6>Predicted Min: {weatherItem.min_temp}°C</h6>
@@ -65,7 +61,7 @@ const createWeatherCards = (type, weatherItem, index) => {
         return (
             <li className="card" key={index}>
                 <h3>({weatherItem.dt_txt.split(" ")[0]})</h3>
-                <img src={`https://openweathermap.org/img/wn/${/*weatherItem.weather[0].icon*/"10d"}@4x.png`} alt="weather-icon" />
+                <img src={`https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png`} alt="weather-icon" />
                 <h6>Temperature: {(weatherItem.main.temp - 273.15).toFixed(2)}°C</h6>
                 <h6>Predicted Max: {weatherItem.main.temp_max}°C</h6>
                 <h6>Predicted Min: {weatherItem.main.temp_min}°C</h6>
