@@ -201,11 +201,12 @@ function App() {
 
     return (
         <>
-            <h1>weather Dashboard</h1>
+            
+            <video src="/background-video/3.mp4" loop muted autoPlay />
+            <h1>WeatherEase</h1>
             <div className="container">
                 <div className="weather-input">
-                    <video src="./background-video/Sun Burst Between Erie Clouds Time Lapse - Royalty Free HD Stock Video Footage..mp4" loop muted autoPlay />
-                    <h3>Enter a City Name</h3>
+                    <h4>Enter a City Name</h4>
                     <input className="city-input"
                         onChange={e => setCityName(e.target.value)}
                         onKeyUp={e => {
@@ -230,8 +231,9 @@ function App() {
 
                 <div className="weather-data">
                     <div className="current-weather">
-                        {weatherData ? createMainWeatherCard(weatherData.type, weatherData.data[0]) : "loading"}
                         <div className="day-forecast">
+                        {weatherData ? createMainWeatherCard(weatherData.type, weatherData.data[0]) : "loading"}
+                        
                             <h2>5-Days Forecast</h2>
                             <ul className="weather-cards">
                                 {weatherData ? weatherData.data?.map((weatherItem, index) => createWeatherCards(weatherData.type, weatherData.data[index], index))

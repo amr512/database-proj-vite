@@ -1,35 +1,42 @@
 /* importing google font (Open Sans) */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* *{
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-} */
+}
 
 h1{
     color: #fff;
     padding: 18px 0;
     text-align: center;
     font-size: 1.75rem;
-    background:#09090D;
+    background: #29293b;
     margin: -8px;
+    letter-spacing: 1px;
 }
 .container{
     display: flex;
     gap: 35px;
     padding: 30px;
     background:transparent;
+    margin-top: 50px;
 }
 h3{
+    color: #29293b;
+    font-size: 1.5em;
+}
+
+h4{
     color: #fff;
+    font-size: 1.5em;
 }
 h6{
-    color: #fff;
+    color: #374361;
     font-size: 1rem;
     margin-top: 10px;
     margin-block-start: 0.5rem;
-margin-block-end: 0;
 }
 video {
     position: absolute;
@@ -57,7 +64,6 @@ video {
     height: 1px;
     width: 100%;
     margin: 25px 0;
-    /* background: #bbb; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +75,6 @@ video {
     font-size: 1.18rem;
     padding: 0 15px;
     margin-top: -4px;
-    /* background: #E3F2FD; */
 }
 .weather-input button {
     width: 100%;
@@ -89,32 +94,25 @@ video {
     width: 100%;
 }
 .current-weather {
-    color: #fff;
     display: flex;
     border-radius: 5px;
     padding: 20px 70px 20px 20px;
-    background:rgba(204, 196, 179, 0.6);
+    background:rgba(236, 222, 192, 0.6); 
     justify-content: space-between;
+    margin-left: 10px;
 }
 .current-weather h2 {
     font-size: 1.7rem;
 }
-.weather-data h4 {
-    margin-top: 12px;
-    font-size: 1rem;
-    font-weight: 500;
-}
+
 .current-weather .icon img {
     max-width: 120px;
     margin-top: -15px;
 }
-.current-weather .icon h4 {
-    margin-top: -10px;
-    text-transform: capitalize;
-}
+
 .day-forecast h2 {
-    font-size: 1.5rem;
-    margin: 20px 40px;
+    font-size: 1.7rem;
+    margin: 20px 0px;
     color: #fff;
 }
 .weather-cards {
@@ -123,22 +121,17 @@ video {
 }
 .weather-cards .card {
 list-style: none;
-margin: 0;
-color: #fff;
+margin: 10px;
 padding: 18px 16px;
 border-radius: 5px;
 background: rgba(204, 196, 179, 0.8);
-
-/* background: #6C757D; */
 width: calc(100% / 5);
 }
 .weather-cards .card  img {
     max-width: 70px;
     margin: 5px 0 -12px 0;
-}/*  دلوقتي هنخليه responsive
-طب ازاي هنعمل كده عن طريق ال media queries 
-وبعد الخطوه ديه نبدأ نعمل create فايل الجافا سكريبت 
-*/
+}
+
 @media (max-width:1400px) {
     .weather-data .current-weather {
         padding: 20px;
