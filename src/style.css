@@ -13,7 +13,7 @@ h1{
     text-align: center;
     font-size: 1.75rem;
     background:#09090D;
-    margin: 0;
+    margin: -8px;
 }
 .container{
     display: flex;
