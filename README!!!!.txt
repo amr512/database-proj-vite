@@ -1,1 +1,0 @@
-run from a terminal in this directory with the command `python -m flask --app main.py run`
