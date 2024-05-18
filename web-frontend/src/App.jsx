@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import './style.css'
 import { getCityCoordinates, getWeatherDetails, supportedCities, getUserCoordinates, createMainWeatherCard, createWeatherCards } from './utils.jsx';
@@ -36,7 +36,7 @@ function App() {
 
     return (
         <>
-            
+
             <video src="/background-video/3.mp4" loop muted autoPlay />
             <h1>WeatherEase</h1>
             <div className="container">
@@ -67,8 +67,8 @@ function App() {
                 <div className="weather-data">
                     <div className="current-weather">
                         <div className="day-forecast">
-                        {weatherData ? createMainWeatherCard(weatherData.type, weatherData.data[0]) : "loading"}
-                        
+                            {weatherData ? createMainWeatherCard(weatherData.type, weatherData.data[0]) : "loading"}
+
                             <h2>5-Days Forecast</h2>
                             <ul className="weather-cards">
                                 {weatherData ? weatherData.data?.map((weatherItem, index) => createWeatherCards(weatherData.type, weatherData.data[index], index))
