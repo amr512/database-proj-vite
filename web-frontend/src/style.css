@@ -129,7 +129,7 @@ margin: 10px;
 padding: 18px 16px;
 border-radius: 5px;
 background: rgba(204, 196, 179, 0.8);
-width: calc(100% / 5);
+width: calc(100% / 4);
 }
 .weather-cards .card  img {
     max-width: 70px;
@@ -144,12 +144,12 @@ width: calc(100% / 5);
         flex-wrap: wrap;
     }
     .weather-cards .card {
-        width: calc(100% / 4 - 15px);
+        width: calc(100% / 3 - 15px);
     }
 }
 @media (max-width: 1200px) {
     .weather-cards.card {
-        width: calc(100% /3 -15px);
+        width: calc(100% /2 -15px);
     }
 }
 @media (max-width: 950px) {
@@ -157,7 +157,7 @@ width: calc(100% / 5);
         width: 450px;
     }
     .weather-cards .card {
-        width: calc(100% / 2 - 10px);
+        width: calc(100%);
     }
 }
 @media (max-width: 750px) {

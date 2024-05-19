@@ -120,6 +120,7 @@ export const getWeatherDetails = async (data_) => {
     try {
         if (info.date !== undefined) {
             const predictionServerURL = "http://localhost:5000"; //import.meta.env.DEV ? "http://localhost:5000" : "https://python-weather-server-1.onrender.com"
+            // const predictionServerURL = "http://192.168.37.98:5000"
             const data = await (await fetch(`${predictionServerURL}/?city=${cityName}&date=${info.date}`, { method: "GET" })).json();
             console.log(data);
             return { type: "predictive", data: data };
