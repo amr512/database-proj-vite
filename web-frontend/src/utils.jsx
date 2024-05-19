@@ -40,7 +40,7 @@ export const createMainWeatherCard = (type, weatherItem) => {
 };
 export const createWeatherCards = (type, weatherItem, index) => {
     console.log(weatherItem, index);
-    if (index === 0) return;g
+    if (index === 0) return;
     if (type === "predictive") {
         return (
             <li className="card" key={index}>
